@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>Almanack of Naval.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #7a7e85;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #5f826b; font-style: italic;}
+.s6 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Almanack of Naval.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">time</span>
+<span class="s2"># Function to type out text with a delay for better game feel</span>
+<span class="s0">def </span><span class="s1">type_text</span><span class="s3">(</span><span class="s1">text</span><span class="s3">, </span><span class="s1">delay</span><span class="s3">=</span><span class="s4">0.05</span><span class="s3">):</span>
+    <span class="s5">&quot;&quot;&quot;Print text one character at a time with a delay.&quot;&quot;&quot;</span>
+    <span class="s0">for </span><span class="s1">char </span><span class="s0">in </span><span class="s1">text</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s1">char</span><span class="s3">, </span><span class="s1">end</span><span class="s3">=</span><span class="s6">''</span><span class="s3">, </span><span class="s1">flush</span><span class="s3">=</span><span class="s0">True</span><span class="s3">)</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s1">delay</span><span class="s3">)</span>
+    <span class="s1">print</span><span class="s3">()  </span><span class="s2"># To move to the next line after the text is printed</span>
+
+<span class="s0">def </span><span class="s1">start_game</span><span class="s3">():</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🌟 Welcome to *The Almanack of Naval Ravikant: The Journey to Wealth and Happiness* 🌟&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1</span><span class="s3">)</span>
+    <span class="s1">type_text</span><span class="s3">(</span>
+        <span class="s6">&quot;You are about to embark on a journey inspired by Naval Ravikant's wisdom on building wealth, achieving happiness, &quot;</span>
+        <span class="s6">&quot;and mastering life. Your decisions will determine how well you internalize and apply these timeless principles.&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">print</span><span class="s3">()</span>
+    <span class="s1">type_text</span><span class="s3">(</span>
+        <span class="s6">&quot;🧘‍♂️ Remember: True wealth is freedom, and true happiness comes from within. Are you ready to navigate the path?&quot;</span><span class="s3">)</span>
+    <span class="s1">print</span><span class="s3">()</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">💼 The journey begins now. Every choice will shape your future... 💼</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s1">play_game</span><span class="s3">()</span>
+
+<span class="s0">def </span><span class="s1">play_game</span><span class="s3">():</span>
+    <span class="s1">score </span><span class="s3">= </span><span class="s4">0  </span><span class="s2"># Keep track of the player's score based on decisions</span>
+
+    <span class="s2"># Question 1: The Definition of Wealth</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">💼 Question 1: The Definition of Wealth 💼&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move1 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You’re starting a new business. How do you begin?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Create a product you are passionate about and let the market follow.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Blend your passion with market needs, testing ideas iteratively.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Focus on finding a scalable market first, and then figure out the product.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Copy an already successful business model to reduce risk.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move1</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🔑 Great! Blending passion with market needs ensures both personal fulfillment and profitability.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move1</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Focusing purely on market size may lead to burnout if it doesn’t align with your interests.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move1</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'A'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💡 Passion is important, but without market demand, scaling could be difficult.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Copying an existing model might not lead to long-term innovation or personal satisfaction.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 2: Specific Knowledge</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">📚 Question 2: Specific Knowledge 📚&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move2 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You want to develop expertise in your field. How do you approach learning?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Focus on hands-on learning and unique experiences that build practical knowledge.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Network with experts and learn through mentorship.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Follow traditional education paths and certifications to validate your skills.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Dive deep into books, podcasts, and online courses, avoiding formal education.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move2</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'A'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🎯 Practical, hands-on learning will give you unique skills that stand out.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move2</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💼 Networking with mentors is a great way to learn from those who’ve walked the path.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move2</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Formal education can validate skills, but practical experience is often more valuable.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;📚 Self-learning is excellent but might lack structured growth and feedback from experts.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 3: Wealth vs. Money</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">💰 Question 3: Wealth vs. Money 💰&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move3 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You receive a high-paying job offer but with long hours and no flexibility. What do you do?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Take the high-paying job and grind to build wealth fast.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Look for a job that offers more freedom and flexibility, even with a lower paycheck.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Start a side hustle to complement the high-paying job until you can pursue something better.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Negotiate better terms to get a higher salary with more flexibility.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move3</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💡 Negotiating better terms can help you maintain balance while still earning more.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move3</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;📈 Starting a side hustle is a great way to transition into something more flexible later.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move3</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚖️ Freedom and flexibility are key to long-term happiness, but it may slow down wealth-building.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Grinding in a high-paying job could lead to burnout without fulfillment.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 4: Compounding</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">📈 Question 4: Compounding 📈&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move4 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You want to improve your health. How do you approach it?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Overhaul your entire diet and exercise routine to see results quickly.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Focus on small, incremental improvements, knowing they’ll compound over time.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Prioritize one aspect first—either diet or exercise—and build from there.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Join a program or hire a coach to accelerate your results.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move4</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💪 Small, consistent improvements compound into major gains over time.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move4</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;📊 Focusing on one aspect at a time can help you avoid overwhelming yourself.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move4</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🏋️‍♂️ Hiring a coach or joining a program is a great way to get guided support.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Trying to overhaul everything at once can lead to burnout.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 5: Leverage</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">⚙️ Question 5: Leverage ⚙️&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">2</span><span class="s3">)</span>
+    <span class="s1">move5 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You have a business idea. How do you scale it?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Hire a team to help you execute your vision as quickly as possible.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Use technology and automation to scale without needing a large team.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Partner with investors to gain capital and scale faster.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Bootstrap the business and grow slowly, keeping full ownership.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move5</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🤖 Leveraging technology and automation is a powerful way to scale efficiently.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move5</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'A'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;👥 Hiring a team can accelerate execution but requires careful management.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move5</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💸 Partnering with investors can bring rapid growth but may require giving up control.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🏗 Bootstrapping allows you to keep ownership, but growth may take longer.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 6: Happiness Is a Choice</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">🧘‍♂️ Question 6: Happiness Is a Choice 🧘‍♂️&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move6 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You find yourself stressed at work and feeling unhappy. What do you do?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Quit your job and pursue something more meaningful to you.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Start exploring side projects to find a new passion while keeping your job.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Work on changing your mindset and practicing gratitude.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Take a vacation or break to recharge and reassess.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move6</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🌿 Changing your mindset can lead to lasting happiness, regardless of external circumstances.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move6</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🎨 Exploring side projects can lead to new opportunities while maintaining stability.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move6</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🛫 Taking a break can provide temporary relief but may not address the root cause.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Quitting is a bold move but could leave you financially unstable.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 7: Judgment Over Time</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">⚖️ Question 7: Judgment Over Time ⚖️&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move7 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You have a big decision to make in your career. How do you approach it?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Take time to gather more information and reflect before deciding.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Trust your gut and make a quick decision, relying on your instincts.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Seek advice from mentors and experts before deciding.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Avoid making a decision until you feel more confident in your options.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move7</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'A'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🕰 Taking time to gather information and reflect improves decision-making over the long term.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move7</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;👥 Seeking advice from others can give you more perspectives, but the final decision rests with you.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move7</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💡 Quick decisions based on gut instinct can be effective, but they carry risks.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚠️ Avoiding decisions might delay progress and keep you in a state of indecision.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 8: Long-Term Thinking</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">🔮 Question 8: Long-Term Thinking 🔮&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move8 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span>
+        <span class="s6">&quot;You have an opportunity to make a quick profit, but at the cost of sacrificing long-term growth. What do you do?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+        <span class="s6">&quot;A) Walk away from the opportunity altogether, focusing only on long-term success.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+        <span class="s6">&quot;B) Take the quick profit while you can and figure out long-term growth later.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+        <span class="s6">&quot;C) Invest in long-term growth and sacrifice the short-term gain.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+        <span class="s6">&quot;D) Find a way to balance both—taking some profit while investing for the future.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+        <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move8</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚖️ Balancing short-term profit and long-term growth can offer both stability and potential.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move8</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🌱 Focusing on long-term growth sets you up for lasting success.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move8</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'A'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🔗 Walking away from quick profits can help maintain long-term focus but may miss opportunities.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💸 Taking a quick profit is tempting, but it may not be sustainable.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 9: Inner Peace</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">🧘‍♂️ Question 9: Inner Peace 🧘‍♂️&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">2</span><span class="s3">)</span>
+    <span class="s1">move9 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You’ve achieved financial success but still feel unfulfilled. How do you find peace?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;A) Focus on external goals, like earning more money, and hope fulfillment follows.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;B) Work on mindfulness and meditation practices to find inner peace.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;C) Seek out deeper relationships with friends and family for connection.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;D) Pursue hobbies or interests outside of work to diversify your life.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                  <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move9</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🧘‍♀️ Focusing on inner peace through mindfulness can bring lasting fulfillment.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move9</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;👥 Building strong relationships can give you a deeper sense of connection and belonging.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move9</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;🎨 Pursuing outside interests can bring balance and joy to your life.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💼 Chasing more money might bring temporary satisfaction, but it won’t guarantee peace.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Question 10: Naval’s Framework for Life (Health, Wealth, and Happiness)</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">⚖️ Question 10: Naval’s Framework for Life ⚖️&quot;</span><span class="s3">)</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+    <span class="s1">move10 </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;You feel like your life is out of balance. How do you address it?</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                   <span class="s6">&quot;A) Focus on building wealth first, then address health and happiness later.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                   <span class="s6">&quot;B) Balance your efforts across health, wealth, and happiness equally right now.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                   <span class="s6">&quot;C) Prioritize health first, knowing that wealth and happiness will follow.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                   <span class="s6">&quot;D) Focus on happiness first, as it might make building health and wealth easier.</span><span class="s0">\n</span><span class="s6">&quot;</span>
+                   <span class="s6">&quot;Choose A, B, C, or D: &quot;</span><span class="s3">)</span>
+
+    <span class="s0">if </span><span class="s1">move10</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'B'</span><span class="s3">:</span>
+        <span class="s1">score </span><span class="s3">+= </span><span class="s4">1</span>
+        <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;⚖️ Balancing health, wealth, and happiness gives you a holistic approach to life.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move10</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'C'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;💪 Prioritizing health can lead to improvements in both wealth and happiness.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">elif </span><span class="s1">move10</span><span class="s3">.</span><span class="s1">upper</span><span class="s3">() == </span><span class="s6">'D'</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;😊 Focusing on happiness can bring fulfillment and make achieving other goals easier.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span>
+            <span class="s6">&quot;💼 Building wealth first might delay fulfillment in health and happiness, but could bring financial stability.</span><span class="s0">\n</span><span class="s6">&quot;</span><span class="s3">)</span>
+
+
+<span class="s2"># After the last question (question 10), call determine_title(score)</span>
+    <span class="s1">determine_title</span><span class="s3">(</span><span class="s1">score</span><span class="s3">)</span>
+
+<span class="s0">def </span><span class="s1">determine_title</span><span class="s3">(</span><span class="s1">score</span><span class="s3">):</span>
+    <span class="s2"># Titles based on score</span>
+    <span class="s1">titles </span><span class="s3">= {</span>
+        <span class="s4">10</span><span class="s3">: </span><span class="s6">&quot;Naval Disciple&quot;</span><span class="s3">,</span>
+        <span class="s4">9</span><span class="s3">: </span><span class="s6">&quot;Wealth and Happiness Seeker&quot;</span><span class="s3">,</span>
+        <span class="s4">7</span><span class="s3">: </span><span class="s6">&quot;Strategic Thinker&quot;</span><span class="s3">,</span>
+        <span class="s4">5</span><span class="s3">: </span><span class="s6">&quot;Growth Learner&quot;</span><span class="s3">,</span>
+        <span class="s4">3</span><span class="s3">: </span><span class="s6">&quot;Novice Explorer&quot;</span><span class="s3">,</span>
+        <span class="s4">0</span><span class="s3">: </span><span class="s6">&quot;Wanderer&quot;</span>
+    <span class="s3">}</span>
+
+    <span class="s2"># Determine the title based on the score</span>
+    <span class="s1">title </span><span class="s3">= </span><span class="s1">titles</span><span class="s3">.</span><span class="s1">get</span><span class="s3">(</span><span class="s1">score</span><span class="s3">, </span><span class="s6">&quot;Wanderer&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Display the final result and feedback</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">f&quot;</span><span class="s0">\n</span><span class="s6">🎉 Congratulations! You’ve completed the journey with a score of </span><span class="s0">{</span><span class="s1">score</span><span class="s0">}</span><span class="s6">/10. 🎉&quot;</span><span class="s3">)</span>
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s6">f&quot;Your final title is: </span><span class="s0">{</span><span class="s1">title</span><span class="s0">}</span><span class="s6">!&quot;</span><span class="s3">)</span>
+
+    <span class="s2"># Give feedback based on the title</span>
+    <span class="s1">feedback </span><span class="s3">= {</span>
+        <span class="s6">&quot;Naval Disciple&quot;</span><span class="s3">: </span><span class="s6">&quot;🏆 You've mastered the wisdom of Naval! You are ready to navigate life with clarity, balance, and deep understanding.&quot;</span><span class="s3">,</span>
+        <span class="s6">&quot;Wealth and Happiness Seeker&quot;</span><span class="s3">: </span><span class="s6">&quot;🎯 Great work! You’ve learned how to align wealth-building and happiness, and you're well on your way to living a fulfilled life.&quot;</span><span class="s3">,</span>
+        <span class="s6">&quot;Strategic Thinker&quot;</span><span class="s3">: </span><span class="s6">&quot;📈 Good job! You’re developing strong habits of thinking long-term, but there’s still room to deepen your understanding of Naval’s wisdom.&quot;</span><span class="s3">,</span>
+        <span class="s6">&quot;Growth Learner&quot;</span><span class="s3">: </span><span class="s6">&quot;⚡ You’re starting to grasp the principles of success and happiness. Keep refining your approach to reach your full potential.&quot;</span><span class="s3">,</span>
+        <span class="s6">&quot;Novice Explorer&quot;</span><span class="s3">: </span><span class="s6">&quot;🌱 You’re just beginning your journey into these ideas. Continue learning and apply these principles to see real growth in your life.&quot;</span><span class="s3">,</span>
+        <span class="s6">&quot;Wanderer&quot;</span><span class="s3">: </span><span class="s6">&quot;🔰 Your journey has just begun. Take time to reflect on your choices and consider how to improve your understanding of Naval’s philosophies.&quot;</span>
+    <span class="s3">}</span>
+
+    <span class="s1">type_text</span><span class="s3">(</span><span class="s1">feedback</span><span class="s3">[</span><span class="s1">title</span><span class="s3">])</span>
+    <span class="s1">time</span><span class="s3">.</span><span class="s1">sleep</span><span class="s3">(</span><span class="s4">1.5</span><span class="s3">)</span>
+
+    <span class="s2"># Bonus video for players who score 7 or higher</span>
+    <span class="s0">if </span><span class="s1">score </span><span class="s3">&gt;= </span><span class="s4">7</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span>
+            <span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">🎥 Bonus! Since you scored 7 or higher, here's a special video to deepen your understanding of Naval’s strategies:&quot;</span><span class="s3">)</span>
+        <span class="s1">type_text</span><span class="s3">(</span><span class="s6">&quot;👉 [Bonus Video Link] https://www.youtube.com/watch?v=OqlfWDyS1Io&quot;</span><span class="s3">)  </span><span class="s2"># Replace with actual video URL</span>
+
+    <span class="s2"># Ask if the player wants to play again</span>
+    <span class="s1">replay </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s6">&quot;</span><span class="s0">\n</span><span class="s6">Would you like to play again to improve your title? (Yes/No): &quot;</span><span class="s3">).</span><span class="s1">lower</span><span class="s3">()</span>
+
+    <span class="s0">if </span><span class="s1">replay </span><span class="s3">== </span><span class="s6">'yes'</span><span class="s3">:</span>
+        <span class="s1">play_game</span><span class="s3">()  </span><span class="s2"># This will restart the game</span>
+    <span class="s0">else</span><span class="s3">:</span>
+        <span class="s1">type_text</span><span class="s3">(</span>
+            <span class="s6">&quot;Thanks for playing *The Almanack of Naval Ravikant: The Journey to Wealth and Happiness*! Remember, real wealth and happiness come from within. Goodbye!&quot;</span><span class="s3">)</span>
+<span class="s1">start_game</span><span class="s3">()</span>
+
+</pre>
+</body>
+</html>
